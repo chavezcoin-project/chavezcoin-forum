@@ -12,7 +12,7 @@ class PostEnqueuer
 
   def enqueue(args)
     queued_post = QueuedPost.new(queue: @queue,
-                     `           state: QueuedPost.states[:new],
+                                 state: QueuedPost.states[:new],
                                  user_id: @user.id,
                                  topic_id: args[:topic_id],
                                  raw: args[:raw],
